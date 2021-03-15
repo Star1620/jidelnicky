@@ -1,0 +1,38 @@
+menu:
+    app:
+        items:
+            default:
+                title: jidelnicky
+                action: homepage:default
+                visibility:
+                    menu: true
+                    breadcrumbs: true
+            dashboard:
+                title: g_menu_dashboard
+                action: Basic:Default:default
+                data:
+                    icon: dashboard
+            devices:
+                title: g_menu_devices
+                action: Assets:Device:default
+                data:
+                    icon: devices
+                items:
+                    deviceAdd:
+                        title: g_menu_add
+                        action: Assets:Device:add
+                        visibility:
+                            menu: false
+                            breadcrumbs: true
+                    deviceEdit:
+                        title: g_menu_edit
+                        action: Assets:Device:edit
+                        visibility:
+                            menu: false
+                            breadcrumbs: true
+                    deviceDetail:
+                        title: g_menu_detail
+                        action: Assets:Device:detail
+                        visibility:
+                            menu: false
+                            breadcrumbs: true

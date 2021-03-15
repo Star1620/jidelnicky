@@ -1,0 +1,31 @@
+parameters:
+  nettrine:
+    host: localhost
+    dbname: jidelnicky
+    user: root
+    password: ''
+    metadata:
+        IIS\App\Model\Entity: '%appDir%/app/Model/Entity/'
+
+
+includes:
+    - service.neon
+    - rights.neon
+    - doctrine.neon
+
+doctrine.dbal:
+    debug:
+        panel: %debugMode%
+    connection:
+        driver: pdo_mysql
+        host: localhost
+        user: root
+        password: ''
+        dbname: jidelnicky
+        metadata: %appDir%/Model/Entity
+#    connection:
+#        driver: pdo_mysql
+#        host: %doctrine.host%
+#        user: %doctrine.user%
+#        password: %doctrine.password%
+#        dbname: %doctrine.dbname%
